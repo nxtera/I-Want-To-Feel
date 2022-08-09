@@ -1,4 +1,65 @@
 * {
     background-color: black;
-    color:azure;
+    font-family: 'Crimson Text', serif;
+
+}
+.header {
+    color: whitesmoke;
+    margin-left: 5vw;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.main-content {
+    color: whitesmoke;
+    border: none;
+    border-radius: 25px;
+    background-image: url("https://source.unsplash.com/700x1000/?music, emotion");
+    width: 30vw;
+    height: 40vw;
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+
+}
+
+.ui-dropdown {
+    color: white;
+    font-size: 30px;
+    background-color: rgb(165, 165, 165);
+    opacity: 80%;
+    border: none;
+    width: 25vw;
+    height: 5vw;
+    border-radius: 10px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+
+}
+
+.btn {
+    color: white;
+    font-size: 20px;
+    background-color: rgb(171, 171, 171);
+    opacity: 80%;
+    border: none;
+    width: 10vw;
+    height: 3vw;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 60%)
+
+}
+
+.btn:hover {
+    opacity: 50%;
+    cursor: pointer;
 }
