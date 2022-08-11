@@ -63,3 +63,18 @@
     opacity: 50%;
     cursor: pointer;
 }
+
+#sub-content {
+    position: absolute;
+    top: 700px;
+    left: 65px;
+}
+
+#main-result {
+    justify-content: center;
+}
+
+#sub-content1 {
+    text-align: center;
+    margin: 10px;
+}
