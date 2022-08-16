@@ -36,7 +36,9 @@ function getMoodResults(moodKey) {
         .then(function(data){
             console.log(data);
 
-            console.log(data.tracks.track.title)
+            for (var i=0; i<data.tracks.length; i++){
+            console.log(data.tracks[i].track.title)
+            }
         })
 }
 
