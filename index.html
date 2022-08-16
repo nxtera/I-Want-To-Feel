@@ -4,77 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Sen&display=swap" rel="stylesheet">
-    
     <link rel= "stylesheet" href = "./assets/style.css">
-
     <title>I want to feel...</title>
-
 </head>
 <body>
-
     <h1 class = "header">I want to feel...</h1>
-
     <main>
-
         <container class = "main-content">
-
             <!--Dropdown from semantic-ui-->
-
-            <select class="ui-dropdown" id="moodOption">
-                <option value="">How do you want to feel?</option>
-                <option value="0" id="mood1">Dark</option>
-                <option value="1" id="mood2">Calm</option>
-                <option value="2" id="mood3">Energetic</option>
-                <option value="3" id="mood4">Cleaning-the-house</option>
-                <option value="4" id="mood5">Dance-Euphorical</option>
-                <option value="5" id="mood6">Happy</option>
+            <select class="ui-dropdown" id="ui-dropdown">
+                <option value="How do you want to feel?">How do you want to feel?</option>
+                <option value="dark" id="mood-1">dark</option>
+                <option value="calm" id="mood-2">calm</option>
+                <option value="energetic" id="mood-3">energetic</option>
+                <option value="cleaningTheHouse" id="mood-4">cleaningTheHouse</option>
+                <option value="danceEuphorical" id="mood-5">danceEuphorical</option>
+                <option value="happy" id="mood-6">happy</option>
             </select>
-
-            <button class = "btn" id="find">find.</button>
+            <button class = "btn" id="find-search">find.</button>
         </container>
 
-        <container id="sub-content">
-
+        <!--Michael Code-->
+        <div class="container">
+            <form id="search-form">
+                <input type="text" id="search-input-box"/>
+                <button>Search</button>
+            </form>
+    
+            <div class="container" id="youtube-videos">
+    
+            </div>
+        
+            <!-- <container id="sub-content">
             <div id="sub-content1">
                 <iframe id="main-result" width="640" height="360"
-                    src="" 
-                    title="YouTube video player" frameborder="0" 
+                    src="https://www.youtube.com/embed/4DxL6IKmXx4"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
             </div>
-
             <div id="sub-content2">
                 <iframe id="result1" class="video" width="320" height="240"
-                    src="" 
-                    title="YouTube video player" frameborder="0" 
+                    src="https://www.youtube.com/embed/4DxL6IKmXx4"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
-
                 <iframe id="result2" class="video" width="320" height="240"
-                    src="" 
-                    title="YouTube video player" frameborder="0" 
+                    src="https://www.youtube.com/embed/4DxL6IKmXx4"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
-
                 <iframe id="result3" class="video" width="320" height="240"
-                    src="" 
-                    title="YouTube video player" frameborder="0" 
+                    src="https://www.youtube.com/embed/4DxL6IKmXx4"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
-
                 <iframe id="result4" class="video" width="320" height="240"
-                    src="" 
-                    title="YouTube video player" frameborder="0" 
+                    src="https://www.youtube.com/embed/4DxL6IKmXx4"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
-
             </div>
-        </container>
-
+        </container> -->
     </main>
-    
-    <script src=script.js></script>
+
+    <script src = "./assets/script.js"></script>
+
 </body>
 </html>

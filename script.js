@@ -1,61 +1,108 @@
-// root API
-var BASE_MUSIC_URL = 'https://musicovery.com/api/V6/playlist.php'
+var dropdown = document.getElementById("ui-dropdown");
+var button = document.getElementById("find-search");
+const inputBox = document.getElementById('search-input-box');
+const searchForm = document.getElementById('search-form');
+const youtubeVideosDiv = document.getElementById('youtube-videos');
+const API_KEY = '866d1f37186fa72dd4052dc20a0be354'
+const YOUTUBE_API_KEY = 'AIzaSyDqVtLW99QeZ0tyRWwesne5DWa8j7QyGEQ'
+var BASE_MUSIC_URL = `https://ws.audioscrobbler.com/2.0/?limit=5&method=tag.gettoptracks&api_key=${API_KEY}&format=json`
 
-// searching for a specific url with varying valence and arousal
-// var url = `${BASE_MUSIC_URL}?fct=getfrommood&trackvalence=${trackValance}&trackarousal=${trackArousal}&resultsnumber=6&listenercountry=gb`;
-// console.log(url)
-
-// various moods with different levels of valence and arousal
-var moods = {
-    // dark: {valance: 1, arousal: 100000}, 
-    // calm: {valance: 10, arousal: 10000},
-    // energetic: {valance: 100, arousal: 1000},
-    // cleaningTheHouse: {valance: 1000, arousal: 100},
-    // danceEuphorical: {valance: 10000, arousal: 10},
-    // happy: {valance: 100000, arousal: 1},
-
-    0: {valance: 1, arousal: 100000}, 
-    1: {valance: 10, arousal: 10000},
-    2: {valance: 100, arousal: 1000},
-    3: {valance: 1000, arousal: 100},
-    4: {valance: 10000, arousal: 10},
-    5: {valance: 100000, arousal: 1},
-}
-console.log(JSON.stringify(moods[1]));
-console.log(moods[1].valance);
 
 // getting song information based on mood input
-function getMoodResults(moodKey) {
-    var moodObj = moods[moodKey];
-    var url = `${BASE_MUSIC_URL}?fct=getfrommood&trackvalence=${moodObj.valance}&trackarousal=${moodObj.arousal}&resultsnumber=6&listenercountry=gb`;
-    console.log(url);
+function getMoodResults(mood) {
+    var url = `${BASE_MUSIC_URL}&tag=${mood}`;
     fetch(url)
-        .then(function(response){
-            return response.json();
-        })
-        .then(function(data){
-            console.log(data);
-
-            for (var i=0; i<data.tracks.length; i++){
-            console.log(data.tracks[i].track.title)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data) {
+        const tracks = data.tracks.track;
+        if(tracks.length > 0) {
+            for (let i = 0; i < tracks.length; i++) {
+                const trackObject = tracks[i];
+                const artist = trackObject.artist.name;
+                const title = trackObject.name;
+                const query = `${artist} ${title}`
+                getYoutubeVideoId(query);
             }
-        })
+        } else {
+            alert('No result found');
+        }
+     })
 }
 
-// getMoodResults('happy');
+function getYoutubeVideoId(query) {
+    const YOUTUBE_VIDEO_ID_BASE = 'https://youtube.googleapis.com/youtube/v3/search';
+    const url = `${YOUTUBE_VIDEO_ID_BASE}?part=id&q=${query}&key=${YOUTUBE_API_KEY}`;
+    fetch(url)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data) {
+        const items = data.items;
+        if(items.length > 0) {
+            const videoId = items[0].id.videoId;
+            createIframe(videoId)
+        } else {
+            alert('No result found');
+        }
+     })
+}
 
-// var mood1 = document.getElementById("mood1").addeventlister("click")
-// var mood2 = document.getElementById("mood2").addeventlister("click")
-// var mood3 = document.getElementById("mood3").addeventlister("click")
-// var mood4 = document.getElementById("mood4").addeventlister("click")
+function createIframe(videoId) {
+    const srcUrl = `https://www.youtube.com/embed/${videoId}`
+    const iframe = document.createElement('iframe');
+    iframe.setAttribute('src', srcUrl);
+    iframe.setAttribute('width', '420');
+    iframe.setAttribute('height', '345');
+    iframe.setAttribute('allow', 'encrypted-media');
+    youtubeVideosDiv.appendChild(iframe);
+}
 
-var find = document.getElementById("find")
+// getMoodResults from Drop Down
+button.onclick = function() {
+    var printText = dropdown.value;
+    getMoodResults(printText)
 
-find.addEventListener("click", function(){
-    var moodKey = moodOption.value;
-    console.log(moodKey);
+}
 
-    getMoodResults(moodKey);
+// function getData(event) {
+//     event.preventDefault();
+//     const inputText = inputBox.value;
+//     inputBox.value = '';
+//     getMoodResults(inputText);
+// }
 
-})
+//searchForm.addEventListener('submit', getData);
+
+
+
+
+// Drop Down
+
+// var moodOne = document.getElementById("mood-1");
+// var moodTwo = document.getElementById("mood-2");
+//var value = dropdown.options[dropdown.selectedIndex].text;
+
+
+
+
+    // if (printText =="dark") {
+    //     console.log("Its dark")
+    // }
+    // else if (printText =="calm") {
+    //     console.log("Its calm")
+    // }
+    // else if (printText =="energetic") {
+    //     console.log("Its energetic")
+    // }
+    // else if (printText =="cleaningTheHouse") {
+    //     console.log("Its cleaningTheHouse")
+    // }
+
+    // else if (printText == "danceEuphorical") {
+    //     console.log ("It's danceEuphorical")
+    // }
+    // else {console.log("It's happy")}
+
 
