@@ -1,6 +1,7 @@
 * {
     background-color: black;
     font-family: 'Crimson Text', serif;
+
 }
 .header {
     color: whitesmoke;
@@ -8,6 +9,7 @@
     font-size: 50px;
     font-style: italic;
 }
+
 .main-content {
     color: whitesmoke;
     border: none;
@@ -20,6 +22,7 @@
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%)
+
 }
 
 .ui-dropdown {
@@ -36,7 +39,7 @@
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
-}
+
 .btn {
     color: white;
     font-size: 20px;
@@ -51,11 +54,13 @@
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, 60%)
+
 }
 
 .btn:hover {
     opacity: 50%;
     cursor: pointer;
+    
 }
 #sub-content {
     position: absolute;
