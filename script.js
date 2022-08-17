@@ -53,10 +53,15 @@ function createIframe(videoId) {
     const srcUrl = `https://www.youtube.com/embed/${videoId}`
     const iframe = document.createElement('iframe');
     iframe.setAttribute('src', srcUrl);
-    iframe.setAttribute('width', '420');
-    iframe.setAttribute('height', '345');
+    iframe.setAttribute('width', '320');
+    iframe.setAttribute('height', '240');
     iframe.setAttribute('allow', 'encrypted-media');
     youtubeVideosDiv.appendChild(iframe);
+    
+    if (youtubeVideosDiv.firstElementChild == iframe){
+        iframe.setAttribute('width', '640');
+        iframe.setAttribute('height', '320');
+    }
 }
 
 // getMoodResults from Drop Down
