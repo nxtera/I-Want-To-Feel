@@ -40,8 +40,6 @@
     margin-right: -50%;
     transform: translate(-50%, -50%)
 
-}
-
 .btn {
     color: white;
     font-size: 20px;
@@ -62,4 +60,103 @@
 .btn:hover {
     opacity: 50%;
     cursor: pointer;
+    
 }
+#sub-content {
+    position: absolute;
+    top: 700px;
+    left: 65px;
+}
+#main-result {
+    justify-content: center;
+}
+#sub-content1 {
+    text-align: center;
+    margin: 10px;
+}
+
+/****** Optimised for smartphone ******/
+
+@media (max-width: 420px)  {
+
+.main-content {
+    
+    width: 70vw;
+    height: 90vw;
+
+}
+
+.ui-dropdown {
+  
+    font-size: 20px;
+    border: none;
+    width: 60vw;
+    height: 20vw;
+   
+}
+
+.btn {
+ 
+    font-size: 20px;
+    width: 30vw;
+    height: 10vw;
+}
+
+/* #main-result {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 50px;
+
+} */
+
+#sub-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 50px;
+    padding: 10px;
+
+  }
+
+/* #sub-content1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 50px;
+    padding: 10px;
+
+  } */
+
+#sub-content2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 50px;
+    width: 80vw;
+    margin-right: 20px;
+
+}
+
+
+.header {
+    color: whitesmoke;
+    margin-left: 5vw;
+    font-size: 30px;
+
+
+}
+
+}
+
+
+/* DISABLES SCROLLING TO RIGHT ON SMALLER SCREENS */
+
+ /* html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative
+  } 
+   */
+
