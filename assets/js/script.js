@@ -4,7 +4,14 @@ const inputBox = document.getElementById('search-input-box');
 const searchForm = document.getElementById('search-form');
 const youtubeVideosDiv = document.getElementById('youtube-videos');
 const API_KEY = '866d1f37186fa72dd4052dc20a0be354'
-const YOUTUBE_API_KEY = 'AIzaSyDqVtLW99QeZ0tyRWwesne5DWa8j7QyGEQ'
+/* Haruka YouTube API */
+//const YOUTUBE_API_KEY = 'AIzaSyDqVtLW99QeZ0tyRWwesne5DWa8j7QyGEQ'
+/* Ashleigh YouTube API Key */
+// const YOUTUBE_API_KEY = 'AIzaSyARnHZxWwT1oqpKXyFipYb2JxsTGHDprQ4'
+/* Ashleigh 2nd YouTube API Key */
+//const YOUTUBE_API_KEY = 'AIzaSyClfGzPB5mmYoKxsJFRe4rfuHBCdKcyvcM'
+/* Ashleigh 3rd YouTube API Key */
+const YOUTUBE_API_KEY = 'AIzaSyCuAF2JksdsM-MWNb3K62MHTaBFiPS94Qk'
 var BASE_MUSIC_URL = `https://ws.audioscrobbler.com/2.0/?limit=5&method=tag.gettoptracks&api_key=${API_KEY}&format=json`
 
 
@@ -23,7 +30,7 @@ function getMoodResults(mood) {
                 const artist = trackObject.artist.name;
                 const title = trackObject.name;
                 const query = `${artist} ${title}`
-                getYoutubeVideoId(query);
+                getYoutubeVideoId(query, i);
             }
         } else {
             alert('No result found');
@@ -31,7 +38,7 @@ function getMoodResults(mood) {
      })
 }
 
-function getYoutubeVideoId(query) {
+function getYoutubeVideoId(query, i) {
     const YOUTUBE_VIDEO_ID_BASE = 'https://youtube.googleapis.com/youtube/v3/search';
     const url = `${YOUTUBE_VIDEO_ID_BASE}?part=id&q=${query}&key=${YOUTUBE_API_KEY}`;
     fetch(url)
@@ -42,24 +49,46 @@ function getYoutubeVideoId(query) {
         const items = data.items;
         if(items.length > 0) {
             const videoId = items[0].id.videoId;
-            createIframe(videoId)
+            // console.log(items[0])
+            // console.log(items[1])
+            // console.log(items[2])
+            // console.log(items[3])
+            // console.log(items[4])
+            createIframe(videoId, i)
         } else {
             alert('No result found');
         }
      })
 }
 
-function createIframe(videoId) {
-    const srcUrl = `https://www.youtube.com/embed/${videoId}`
-    const iframe = document.createElement('iframe');
-    iframe.setAttribute('src', srcUrl);
-    iframe.setAttribute('width', '420');
-    iframe.setAttribute('height', '345');
-    iframe.setAttribute('allow', 'encrypted-media');
-    youtubeVideosDiv.appendChild(iframe);
-}
+function createIframe(videoId, i) {
 
+    const srcUrl = `https://www.youtube.com/embed/${videoId}`
+    console.log(srcUrl)
+    //for (i = 0; i < 5; i++) {
+        document.getElementById("result" + (i + 1)).src = srcUrl
+      //  }
+    
+    }
+        
+    
+
+    
+
+// function createIframe(videoId) {
+//     const srcUrl = `https://www.youtube.com/embed/${videoId}`
+//     const iframe = document.createElement('iframe');
+//     iframe.setAttribute('src', srcUrl);
+//     iframe.setAttribute('width', '420');
+//     iframe.setAttribute('height', '345');
+//     iframe.setAttribute('allow', 'encrypted-media');
+//     youtubeVideosDiv.appendChild(iframe);
+
+    //const iframe = document.getElementById("result1");
+    //iframe.setAttribute('src', srcUrl);
 // getMoodResults from Drop Down
+
+
 button.onclick = function() {
     var printText = dropdown.value;
     getMoodResults(printText)
