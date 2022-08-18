@@ -1,8 +1,8 @@
 # i-want-to-feel
 
-Project 1 group assignment for BCU Bootcamp due 18-08-22
-Developers: Haruka Hashimoto, Ashleigh Chevannes, Jess Onacko
-Deployed URL: 
+- Project 1 group assignment for BCU Bootcamp due 18-08-22
+- Developers: Haruka Hashimoto, Ashleigh Chevannes, Jess Onacko
+- Deployed URL: https://nxtera.github.io/I-Want-To-Feel/
 
 Gif of deployed web page:
 
@@ -21,7 +21,7 @@ Contents:
 
 This project was undertaken as a submission for a Birmingham City Bootcamp assignment, with a brief to design and create an application from scratch in a group, using Github collaboratively to realise the concept together.  The project requirements are below:
 
-[image 2 here]
+![image](https://user-images.githubusercontent.com/106882755/185477936-04129873-1883-4b86-bf89-05cb9e09eb69.png)
 
 The User Story is as follows:
 
