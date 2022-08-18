@@ -1,0 +1,151 @@
+* {
+    background-color: black;
+    font-family: 'Crimson Text', serif;
+
+}
+.header {
+    color: whitesmoke;
+    margin-left: 5vw;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.main-content {
+    color: whitesmoke;
+    border: none;
+    padding: 10px;
+    border-radius: 25px;
+    border: solid; 
+    background-image: url("https://source.unsplash.com/700x1000/?music, emotion");
+    width: 30vw;
+    height: 40vw;
+    position: absolute;
+        top: 40%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+
+}
+
+.ui-dropdown {
+    color: white;
+    font-size: 30px;
+    background-color: rgb(165, 165, 165);
+    opacity: 80%;
+    border: solid;
+    width: 25vw;
+    height: 5vw;
+    border-radius: 10px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+select:hover {
+    border: 2px solid blueviolet;
+    cursor: pointer;
+}
+
+
+
+
+.btn {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: rgb(171, 171, 171);
+    opacity: 80%;
+    border: solid;
+    width: 10vw;
+    height: 3vw;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 60%)
+
+}
+
+.btn:hover {
+    opacity: 70%;
+    cursor: pointer;
+    border: solid 2px blueviolet;
+    
+}
+#sub-content {
+    display: inline;
+    position: relative;
+    top: 800px;
+    align-items: center;
+}
+#main-result {
+    justify-content: center;
+}
+#sub-content1 {
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+}
+
+#sub-content2 {
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+}
+
+/****** Optimised for smartphone ******/
+@media (max-width: 420px)  {
+    .main-content {
+        width: 70vw;
+        height: 90vw;
+    }
+    .ui-dropdown {
+        font-size: 20px;
+        border: none;
+        width: 60vw;
+        height: 20vw;
+    }
+    .btn {
+        font-size: 20px;
+        width: 30vw;
+        height: 10vw;
+    }
+    #sub-content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 50px;
+        padding: 10px;
+      }
+    #sub-content1 {
+        display: flex;
+        justify-content:left;
+        flex-direction: column;
+        margin-bottom: 240px;
+        margin-left: -45px;
+      }
+    /* #main-result {
+    width: 320px !important;
+    height: 240px !important;
+    } */
+    #sub-content2 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 50px;
+        width: 80vw;
+        margin-right: 20px;
+        margin-left: -45px;
+    }
+    .header {
+        color: whitesmoke;
+        margin-left: 5vw;
+        font-size: 30px;
+    }
+    }
+
+
+

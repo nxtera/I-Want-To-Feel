@@ -4,53 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Sen&display=swap" rel="stylesheet">
-    <link rel= "stylesheet" href = "./assets/style.css">
+    <link rel= "stylesheet" href = "./assets/css/style.css">
     <title>I want to feel...</title>
 </head>
 <body>
-    <h1 class = "header">I want to feel...</h1>
+    <h1 class = "header">🎵I want to feel...🎵</h1>
     <main>
         <container class = "main-content">
             <!--Dropdown from semantic-ui-->
             <select class="ui-dropdown" id="ui-dropdown">
                 <option value="How do you want to feel?">How do you want to feel?</option>
-                <option value="dark" id="mood-1">dark</option>
-                <option value="calm" id="mood-2">calm</option>
-                <option value="energetic" id="mood-3">energetic</option>
-                <option value="cleaningTheHouse" id="mood-4">cleaningTheHouse</option>
-                <option value="danceEuphorical" id="mood-5">danceEuphorical</option>
-                <option value="happy" id="mood-6">happy</option>
+                <option value="blues" id="mood-1">Classy</option>
+                <option value="Chillout" id="mood-2">Chill</option>
+                <option value="energetic" id="mood-3">Energetic</option>
+                <option value="90s" id="mood-4">Nostalgic</option>
+                <option value="soul" id="mood-5">Uplifted</option>
+                <option value="happy" id="mood-6">Happy</option>
             </select>
-            <button class = "btn" id="find-search">find.</button>
+            <button class = "btn" id="find-search">find.
+                <a href ="#result1"></a>
+            </button>
         </container>
-
-        <!--Michael Code-->
-        <div class="container">
-            <form id="search-form">
-                <input type="text" id="search-input-box"/>
-                <button>Search</button>
-            </form>
-    
-            <div class="container" id="youtube-videos">
-    
-            </div>
-        
-            <!-- <container id="sub-content">
+                
+            <container id="sub-content">
             <div id="sub-content1">
-                <iframe id="main-result" width="640" height="360"
+                <iframe id="result1" width="640" height="360"
                     src="https://www.youtube.com/embed/4DxL6IKmXx4"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
             </div>
             <div id="sub-content2">
-                <iframe id="result1" class="video" width="320" height="240"
-                    src="https://www.youtube.com/embed/4DxL6IKmXx4"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
                 <iframe id="result2" class="video" width="320" height="240"
                     src="https://www.youtube.com/embed/4DxL6IKmXx4"
                     title="YouTube video player" frameborder="0"
@@ -66,44 +51,14 @@
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
+                <iframe id="result5" class="video" width="320" height="240"
+                    src="https://www.youtube.com/embed/4DxL6IKmXx4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
             </div>
-        </container> -->
+        </container>
     </main>
-
-    <script src = "./assets/script.js"></script>
-
-=======
-
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Sen&display=swap" rel="stylesheet">
-    
-    <link rel= "stylesheet" href = "./assets/style.css">
-
-    <title>I want to feel...</title>
-
-</head>
-<body>
-
-    <h1 class = "header">I want to feel...</h1>
-
-    <main>
-
-    <container class = "main-content">
-
-        <!--Dropdown from semantic-ui-->
-
-        <select class="ui-dropdown">
-            <option value="">How do you want to feel?</option>
-            <option value="0">Sorrowful</option>
-            <option value="1">Energetic</option>
-            <option value="2">Lonely</option>
-            <option value="3">Passionate</option>
-          </select>
-
-        <button class = "btn">find.</button>
-    </container>
-
-</main>
-    
-
+    <script src = "./assets/js/script.js"></script>
 </body>
 </html>
