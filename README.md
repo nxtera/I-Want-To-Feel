@@ -4,9 +4,9 @@ Project 1 group assignment for BCU Bootcamp due 18-08-22
 Developers: Haruka Hashimoto, Ashleigh Chevannes, Jess Onacko
 Deployed URL: 
 
-Image of deployed web page:
+Gif of deployed web page:
 
-[image 1a/b here]
+![me](https://github.com/nxtera/I-Want-To-Feel/blob/main/demo.gif)
 
 Contents:
 
