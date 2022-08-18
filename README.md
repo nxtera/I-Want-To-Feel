@@ -3,6 +3,7 @@
 - Project 1 group assignment for BCU Bootcamp due 18-08-22
 - Developers: Haruka Hashimoto, Ashleigh Chevannes, Jess Onacko
 - Deployed URL: https://nxtera.github.io/I-Want-To-Feel/
+- Google Drive: https://drive.google.com/drive/folders/16jzr2Q4pDWiGaqzicwOn6QGfSEldG7Ht
 
 Gif of deployed web page:
 
