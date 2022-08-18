@@ -4,36 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Sen&display=swap" rel="stylesheet">
-    
-    <link rel= "stylesheet" href = "./assets/style.css">
-
+    <link rel= "stylesheet" href = "./assets/css/style.css">
     <title>I want to feel...</title>
-
 </head>
 <body>
-
-    <h1 class = "header">I want to feel...</h1>
-
+    <h1 class = "header">🎵I want to feel...🎵</h1>
     <main>
-
-    <container class = "main-content">
-
-        <!--Dropdown from semantic-ui-->
-
-        <select class="ui-dropdown">
-            <option value="">How do you want to feel?</option>
-            <option value="0">Sorrowful</option>
-            <option value="1">Energetic</option>
-            <option value="2">Lonely</option>
-            <option value="3">Passionate</option>
-          </select>
-
-        <button class = "btn">find.</button>
-    </container>
-
-</main>
-    
+        <container class = "main-content">
+            <!--Dropdown from semantic-ui-->
+            <select class="ui-dropdown" id="ui-dropdown">
+                <option value="How do you want to feel?">How do you want to feel?</option>
+                <option value="blues" id="mood-1">Classy</option>
+                <option value="Chillout" id="mood-2">Chill</option>
+                <option value="energetic" id="mood-3">Energetic</option>
+                <option value="90s" id="mood-4">Nostalgic</option>
+                <option value="soul" id="mood-5">Uplifted</option>
+                <option value="happy" id="mood-6">Happy</option>
+            </select>
+            <button class = "btn" id="find-search">find.
+                <a href ="#result1"></a>
+            </button>
+        </container>
+                
+            <container id="sub-content">
+            <div id="sub-content1">
+                <iframe id="result1" width="640" height="360"
+                    src="https://www.youtube.com/embed/4DxL6IKmXx4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+            <div id="sub-content2">
+                <iframe id="result2" class="video" width="320" height="240"
+                    src="https://www.youtube.com/embed/4DxL6IKmXx4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+                <iframe id="result3" class="video" width="320" height="240"
+                    src="https://www.youtube.com/embed/4DxL6IKmXx4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+                <iframe id="result4" class="video" width="320" height="240"
+                    src="https://www.youtube.com/embed/4DxL6IKmXx4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+                <iframe id="result5" class="video" width="320" height="240"
+                    src="https://www.youtube.com/embed/4DxL6IKmXx4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+        </container>
+    </main>
+    <script src = "./assets/js/script.js"></script>
 </body>
 </html>
